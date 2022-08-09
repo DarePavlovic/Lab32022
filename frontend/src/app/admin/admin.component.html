@@ -1,0 +1,13 @@
+<table>
+    <tr>
+        <td>Naziv</td>
+        <td>Kolicina</td>
+        <td>Akcija</td>
+    </tr>
+    <tr *ngFor="let p of sviProizvodi" [class.red]="p.kolicina<5">
+        <td>{{p.naziv}}</td>
+        <td>{{p.kolicina}}</td>
+        <td><button (click)='dodaj(p.naziv)'>+</button></td>
+        <td><button (click)='ukloni(p.naziv)'>-</button></td>
+    </tr>
+</table>
